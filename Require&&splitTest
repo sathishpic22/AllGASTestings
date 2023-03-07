@@ -1,0 +1,17 @@
+pragma solidity ^0.8.7;
+contract MappingTest {
+
+int a=10;
+    
+    // Execution Cost 2398
+    function requireTest()public view {
+
+        require(a==10 && a<11,"wrong inputs");
+    }
+    // Execution Cost 2368
+    function requireTest1()public view {
+        require(a==10,"wrong inputs");
+        require(a<11 ,"wrong inputs");
+    }
+
+}
